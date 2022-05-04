@@ -2,6 +2,15 @@
 
 A Terraform module that automatically provisions and configures an aws backend
 
+## Permissions
+Terraform needs permissions to provision everything properly.
+
+| Permission               | Description                                                                                           |
+|--------------------------|-------------------------------------------------------------------------------------------------------|
+| AmazonKMSFullAccess      | required to create encryption keys. See my custom [AWSPolicies](https://github.com/b3ny4/AWSPolicies) |
+| AmazonS3FullAccess       | required to provision the bucket that stores the state.                                               |
+| AmazonDynamoDBFullAccess | required to provision dynamoDB that manages state locking                                             |
+
 ## Example
 
 An example worktree using the module:
